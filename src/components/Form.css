@@ -1,53 +1,94 @@
-/* src/components/MultiStepForm.css */
-
-.container {
-  max-width: 600px;
-  margin: auto;
+.q-container {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.q-container > form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-label {
+.q-container .q-card {
+  background-color: #ffffff;
+  width: 100%;
+  min-height: 3rem;
+  padding: 30px;
+  border-radius: 8px;
+  border: 0.5px solid #feffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.q-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: none;
+}
+
+.q-card > div > label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: rgb(32, 33, 36);
+  font-size: 16px;
+  line-height: 24px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="number"],
-select {
+.q-card > div > span {
+  margin-left: 5px;
+  color: red;
+}
+
+.q-card > p {
+  font-weight: 400;
+  color: rgb(32, 33, 36);
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.q-card > input,
+.q-card > select {
   width: 100%;
   padding: 10px;
   border: none;
   border-bottom: 1px solid #ccc;
+  background-color: #f7f7f7;
   border-radius: 0;
   box-sizing: border-box;
   margin-bottom: 10px;
-  background-color: #f7f7f7;
   transition: border-color 0.3s;
+  line-height: 20px;
+  font-size: 14px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="date"]:focus,
-input[type="number"]:focus,
-select:focus {
+.q-card > input:focus,
+.q-card > select:focus {
   border-bottom: 2px solid #1a73e8;
   outline: none;
 }
 
-select {
-  height: 40px;
+.choice {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  margin-top: 10px;
+}
+
+.choice > .choice-label {
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.file-style {
+  border: none !important;
 }
 
 button {
@@ -114,79 +155,4 @@ button[type="button"].clear-button:hover {
 .progress-text {
   margin-left: 10px;
   font-size: 14px;
-}
-
-.q-container {
-  background-color: #e7f6f9;
-  padding-top: 10px;
-}
-
-.q-container > form {
-  width: 40vw;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.q-container .q-card {
-  background-color: #ffffff;
-  width: 100%;
-  min-height: 3rem;
-  padding: 30px;
-  border-radius: 18px;
-  border: 0.5px solid #feffff;
-}
-
-.q-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 1px solid rgb(32, 33, 36);
-}
-
-.q-card > div > label {
-  font-weight: 400;
-  color: rgb(32, 33, 36);
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.q-card > div > span {
-  margin-left: 5px;
-  color: red;
-}
-
-.q-card > p {
-  font-weight: 400;
-  color: rgb(32, 33, 36);
-  font-size: 13px;
-  line-height: 22px;
-}
-
-.q-card > input {
-  width: 50%;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgb(32, 33, 36);
-  line-height: 20px;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.choice {
-  display: flex;
-  align-items: center;
-  width: 30%;
-  margin-top: 10px;
-}
-
-.choice > .choice-label {
-  margin-left: 20px;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.file-style {
-  border: none !important;
 }
